@@ -1,3 +1,1 @@
-<div>
-    <!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
-</div>
+<h2>Lista de actividades en la escuela Telesecundaria Justo Sierra</h2>

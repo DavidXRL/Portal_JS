@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ActivityController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +32,10 @@ Route::get('/about_us', function () {
 Route::get('/30dtv0296r_tjs', function () {
     return view('30dtv0296r_tjs');
 });
+
+
+
+
+//RUTAS PARA MÉTODOS REST DE LAS ACTIVIDADES
+Route::resource('/activities', App\Http\Controllers\ActivityController::class);
+Route::get('/activities/{activity}/delete', [App\Http\Controllers\ActivityController::class, 'delete'])->name('activities.delete');
