@@ -4,13 +4,13 @@
     <title>Inicio | Telesecundaria Justo Sierra</title>
 
 @include('layout.main_template')
-
 <main class="mx-auto mt-10 p-20 bg-white rounded-lg shadow-lg" style="width: 97%">
     <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">Bienvenidos a la Escuela Telesecundaria Justo Sierra</h1>
     <section class="mb-15">
         <p class="text-lg text-gray-700 mb-8  text-justify">
             En la Escuela Telesecundaria Justo Sierra nos dedicamos a ofrecer una educación de calidad, promoviendo valores, el desarrollo integral y el pensamiento crítico en nuestros estudiantes. Nuestro equipo docente está comprometido con la formación académica y humana, en un ambiente seguro y motivador.
         </p>
+
 
         <!-- Carrusel de imágenes -->
         <div id="carousel" class="relative w-full max-w-7xl mx-auto mb-10">
@@ -188,14 +188,12 @@
     30dtv0296r@secundaria.msev.gob.mx
   </span>
 </li>
-
                 </ul>
             </div>
-
         </div>
     </div>
 </section>
-
+<a href="{{ route('activities.index') }}" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-full shadow transition text-lg">Crear nueva actividad</a>
 
 
     <section class="mb-12">

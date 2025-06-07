@@ -10,8 +10,10 @@ class Activity extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name_act',
         'description_activity',
         'date_activity',
         'image_activity',
+        'time_activity'
     ];
 }
