@@ -18,7 +18,7 @@ class ActivityController extends Controller
     public function workshop()
     {
         $activities = Activity::paginate(10); // Adjust the number of items per page as needed
-        return view('/workshop', compact('activities'));
+        return view('/activities_esc', compact('activities'));
     }
 
     public function create()

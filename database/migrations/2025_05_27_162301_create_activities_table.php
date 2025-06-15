@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name_act', 250)->nullable()->default('actividad');
             $table->string('description_activity');
             $table->date('date_activity')->nullable();
-            $table->time('time_activity')->nullable();
             $table->string('image_activity', 100)->nullable()->default('imagen_act');
             $table->timestamps();
         });

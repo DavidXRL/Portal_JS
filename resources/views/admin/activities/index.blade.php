@@ -39,15 +39,13 @@
                             <h2 class="text-xl font-bold text-gray-800 mb-2 truncate">{{ $activity->name_act }}</h2>
 
                             <p class="text-gray-700 flex-grow mb-4 whitespace-pre-line">
-                                {{ $activity->description_activity }}
+                                <span class="font-semibold">Descripción: </span>{{ $activity->description_activity }}
                             </p>
 
                             <div class="text-sm text-gray-500 mb-4">
-                                <span class="font-semibold">ID:</span> {{ $activity->id }} <br />
-                                <span class="font-semibold">Fecha:</span> {{ \Carbon\Carbon::parse($activity->date_activity)->format('d/m/Y') }}
+                                <span class="font-semibold">ID de la actividad:</span> {{ $activity->id }} <br />
+                                <span class="font-semibold">Fecha de publicación:</span> {{ \Carbon\Carbon::parse($activity->date_activity)->format('d/m/Y') }}
                                 <br />
-                                <span class="font-semibold">Hora:</span>
-                                {{ $activity->time_activity ? \Carbon\Carbon::parse($activity->time_activity)->format('H:i') : 'Sin hora' }}
                             </div>
 
                             <div class="flex gap-3 justify-end">

@@ -64,17 +64,6 @@
                     >
                 </div>
 
-                <div>
-                    <label for="time_activity" class="block text-base font-semibold text-gray-800 mb-2">Hora de la actividad</label>
-                    <input
-                        type="time"
-                        name="time_activity"
-                        id="time_activity"
-                        required
-                        class="w-full border border-gray-200 rounded-xl shadow p-3 focus:ring-2 focus:ring-gray-300 bg-gray-50/50"
-                        value="{{ old('time_activity', $activity->time_activity) }}"
-                    >
-                </div>
 
                 <div>
                     <label for="image_activity" class="block text-base font-semibold text-gray-800 mb-2">Seleccionar imagen</label>
@@ -104,7 +93,7 @@
                     <a href="{{ route('activities.index') }}"
                        class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center"
                     >
-                        Volver a la lista de actividades
+                        Volver a actividades
                     </a>
                 </div>
             </form>

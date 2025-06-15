@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Activities;
+namespace App\Http\Requests\Workshops;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,10 +22,10 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-             'name_act' => 'required|string|max:255',
-            'description_activity' => 'required|string|max:1000',
-            'date_activity' => 'required|date',
-            'image_activity' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name_workshop' => 'required|string|max:250',
+            'description_workshop' => 'required|string',
+            'date_workshop' => 'required|date',
+            'image_workshop' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 }

@@ -25,8 +25,8 @@ class StoreRequest extends FormRequest
             'name_act' => 'required|string|max:255',
             'description_activity' => 'required|string|max:1000',
             'date_activity' => 'required|date',
-            'image_activity' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'time_activity' => 'required',
+            'image_activity' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+
         ];
     }
 }

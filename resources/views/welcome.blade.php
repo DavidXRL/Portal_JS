@@ -7,7 +7,7 @@
 <main class="mx-auto mt-10 p-20 bg-white rounded-lg shadow-lg" style="width: 97%">
     <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center">Bienvenidos a la Escuela Telesecundaria Justo Sierra</h1>
     <section class="mb-15">
-        <p class="text-lg text-gray-700 mb-8  text-justify">
+        <p class="text-lg text-gray-700 mb-8 text-justify">
             En la Escuela Telesecundaria Justo Sierra nos dedicamos a ofrecer una educación de calidad, promoviendo valores, el desarrollo integral y el pensamiento crítico en nuestros estudiantes. Nuestro equipo docente está comprometido con la formación académica y humana, en un ambiente seguro y motivador.
         </p>
 
@@ -51,8 +51,12 @@
             </li>
         </ul>
     </section>
+
     <section class="bg-gray-100 rounded-2xl shadow-lg p-8 my-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Talleres y Actividades</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Descubre Nuestros Talleres</h2>
+        <p class="text-lg text-gray-700 mb-8 font-semibold text-center">
+            Ofrecemos una variedad de talleres diseñados para fomentar el aprendizaje y la creatividad en nuestros estudiantes.
+        </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             <!-- Computación -->
             <div class="bg-white rounded-xl p-5 shadow flex flex-col items-center hover:shadow-lg transition">
@@ -63,7 +67,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-1 text-center">Computación</h3>
-                <p class="text-gray-600 text-center text-sm">
+                <p class="text-gray-600 text-center text-lg">
                     Habilidades digitales, manejo de software y herramientas tecnológicas.
                 </p>
             </div>
@@ -77,7 +81,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-1 text-center">Danza</h3>
-                <p class="text-gray-600 text-center text-sm">
+                <p class="text-gray-600 text-center text-lg">
                     Expresión artística y cultural, trabajo en equipo y confianza.
                 </p>
             </div>
@@ -95,7 +99,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-1 text-center">Banda de Guerra</h3>
-                <p class="text-gray-600 text-center text-sm">
+                <p class="text-gray-600 text-center text-lg">
                     Disciplina, coordinación y trabajo en equipo en la banda de guerra escolar.
                 </p>
             </div>
@@ -111,7 +115,7 @@
                     </svg>
                 </div>
                 <h3 class="text-lg font-semibold text-gray-800 mb-1 text-center">Robótica</h3>
-                <p class="text-gray-600 text-center text-sm">
+                <p class="text-gray-600 text-center text-lg">
                     Innovación y lógica construyendo y programando robots.
                 </p>
             </div>
@@ -193,12 +197,7 @@
         </div>
     </div>
 </section>
-<a href="{{ route('activities.index') }}" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-full shadow transition text-lg">Crear nueva actividad</a>
 
-
-    <section class="mb-12">
-
-    </section>
 </main>
 @include('layout.footer_template')
 

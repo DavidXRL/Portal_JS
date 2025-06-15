@@ -16,7 +16,9 @@
         <a href="{{ url('/') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Inicio</a>
         <a href="{{ url('/#contact-info') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Contacto</a>
         <a href="{{ url('/about_us') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Sobre nosotros</a>
-        <a href="{{ url('/workshop') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Talleres y actividades</a>
+        <a href="{{ url('/activities_esc') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Actividades</a>
+        <a href="{{ url('/workshop') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Talleres</a>
+        <a href="{{ route('activities.index') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Vista de administrador</a>
     </nav>
 </header>
 
@@ -83,3 +85,4 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
+

@@ -11,7 +11,9 @@
 
 
     @if (session('status'))
-        {{session('status')}}
+        <div class="alert alert-success mb-4">
+            {{ session('status') }}
+        </div>
     @endif
 
     @yield('content')

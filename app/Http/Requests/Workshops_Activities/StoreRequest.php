@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Activities;
+namespace App\Http\Requests\Workshops_Activities;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateRequest extends FormRequest
+class StoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,10 +22,12 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-             'name_act' => 'required|string|max:255',
-            'description_activity' => 'required|string|max:1000',
+            'name_activity' => 'required|string|max:250',
+            'description_activity' => 'required|string',
             'date_activity' => 'required|date',
-            'image_activity' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'time_activity' => 'required|date_format:H:i',
+            'image_activity' => 'required|image|mimes:jpeg,png,jpg,gif',
+            'workshop_id' => 'required|exists:workshops,id',
         ];
     }
 }
