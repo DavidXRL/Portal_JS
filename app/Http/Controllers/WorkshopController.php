@@ -72,6 +72,12 @@ class WorkshopController extends Controller
 
     public function destroy(Workshop $workshop)
     {
+        if($workshop->image_workshop){
+            $imagePath = public_path("image/workshops/{$workshop->image_workshop}");
+            if(file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
         $workshop->delete();
         return to_route('workshops.index')->with('status', 'Eliminado exitosamente');
     }

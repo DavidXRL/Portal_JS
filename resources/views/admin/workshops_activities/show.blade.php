@@ -29,7 +29,7 @@
 
         <!-- Imagen arriba -->
         <div class="flex justify-center mb-8">
-            <img src="/image/workshops/{{ $workshop_activity->image_activity }}"
+            <img src="/image/workshops_activities/{{ $workshop_activity->image_activity }}"
                 alt="Imagen de la actividad del taller"
                 class="max-w-full max-h-80 md:max-h-96 h-auto object-contain rounded-xl border-2 border-gray-200 shadow-md transition-transform hover:scale-105 duration-300" />
         </div>

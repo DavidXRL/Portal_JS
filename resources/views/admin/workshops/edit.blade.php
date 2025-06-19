@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Detalles del Taller | Telesecundaria Justo Sierra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <meta charset="UTF-8">
+    <title>Editar actividad | Telesecundaria Justo Sierra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite(['resources/css/app.css'])
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen">
-    @include('layout.main_template')
+    @include('layout.main_template-admin')
 
-    <main class="flex items center justify-center min-h-screen">
+    <main class="flex items center justify-center min-h-screen mt-10 mb-10">
         <section class="w-full max-w-2xl bg-white/90 rounded-3xl shadow-2xl p-10 border border-gray-200">
-            <h1 class="text-4xl font-extrabold text-center text-gray-700 mb-10 drop-shadow-lg">
-                Editar Información del Taller
-            </h1>
 
-            @if ($errors->any())
-                <div class="mb-6 bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded-xl shadow">
-                    <ul class="list-disc pl-5">
-                        @foreach ($errors->all() as $e)
-                            <li>{{ $e }}</li>
-                        @endforeach
-                    </ul>
+          <div class="mb-10 text-center">
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
+                    Editar información del taller:
+                </h1>
+                <div class="inline-block bg-green-100 px-5 py-2 rounded-full mt-2">
+                    <span class="text-xl font-semibold text-green-700">
+                        {{ $workshop->name_workshop }}
+                    </span>
                 </div>
-            @endif
+            </div>
+
+
+
+        @if ($errors->any())
+            <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-8 rounded">
+                <ul class="list-disc pl-5">
+                    @foreach ($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
             <form action="{{ route('workshops.update', $workshop->id) }}" method="POST" enctype="multipart/form-data" class="space-y-7">
                 @csrf
@@ -82,18 +92,14 @@
                     </div>
                 </div>
 
-                 <div>
-                    <button
-                        type="submit"
-                        class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all"
-                    >Guardar Cambios
-                    </button>
-                </div>
-                <div class="flex justify-center mt-4">
-                    <a href="{{ route('activities.index') }}"
-                       class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center"
-                    >
-                        Volver a la vista de talleres
+            <div>
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all">Guardar cambios</button>
+                       </div>
+            <div class="flex justify-center mt-4">
+                <a href="{{ route('workshops.index') }}"
+                    class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center">
+                    Volver a la vista de talleres
                     </a>
                 </div>
             </form>

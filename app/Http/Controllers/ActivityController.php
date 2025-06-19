@@ -73,6 +73,17 @@ class ActivityController extends Controller
 
     public function destroy(Activity $activity)
     {
+
+        // CON AYUDA DE ESTA FUNCIÓN SE PUEDEN ELIMINAR LAS IMÁGENES DE LA ACTIVIDAD DE MANERA PERMANENTE
+        // Verifica si la imagen existe y la elimina
+        // Asegúrate de que la ruta sea correcta y que el archivo exista antes de intentar eliminarlo
+        if($activity->image_activity)
+        {
+            $imagePath = public_path('image/activities/' . $activity->image_activity);
+            if (file_exists($imagePath)) {
+                unlink($imagePath); // Delete the image file
+            }
+        }
         $activity->delete();
         return to_route('activities.index')->with('status', 'Activity deleted successfully.');
     }

@@ -32,7 +32,7 @@
                 @foreach ($workshops_activities as $w_activity)
                     <article
                         class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                        <img src="/image/workshops/{{ $w_activity->image_activity }}" alt="Imagen de taller"
+                        <img src="/image/workshops_activities/{{ $w_activity->image_activity }}" alt="Imagen de la actividad: {{ $w_activity->name_activity }}"
                             class="w-full h-48 object-cover" />
 
                         <div class="p-6 flex flex-col flex-grow">

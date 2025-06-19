@@ -3,8 +3,9 @@
 <header class="w-full bg-white shadow-md py-4 px-4 md:px-8 flex items-center justify-between flex-wrap" style="position: sticky; top: 0; z-index: 100;">
     <div class="flex items-center space-x-3">
         <!-- Espacio para imagen -->
-        <img src="{{asset('img/logo.png') }}" alt="Logo" class="h-12 w-12 md:h-10 md:w-10 object-contain" />
-        <span class="text-base sm:text-lg md:text-xl font-bold text-gray-800">Escuela Telesecundaria Justo Sierra</span>
+        <a href="{{ url('/') }}">
+            <img src="{{ asset('img/logo.png') }}" alt="Logo" class="h-12 w-12 md:h-10 md:w-10 object-contain" />
+        </a>  <span class="text-base sm:text-lg md:text-xl font-bold text-gray-800">Escuela Telesecundaria Justo Sierra</span>
     </div>
     <button id="menu-toggle" class="md:hidden text-indigo-950 focus:outline-none ml-2" aria-label="Abrir menú">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

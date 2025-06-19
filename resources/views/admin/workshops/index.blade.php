@@ -15,22 +15,24 @@
             <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 drop-shadow-md text-center md:text-left">
                 Lista de Talleres
             </h1>
-            <a href="{{ route('workshops.create') }}"
-                class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-white font-semibold px-7 py-3 rounded-full shadow-lg transition duration-300 text-lg">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 4v16m8-8H4" />
-                </svg>
-                Nuevo Taller
-            </a>
-            <a href="{{ route('workshops_activities.index') }}"
-                class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-white font-semibold px-7 py-3 rounded-full shadow-lg transition duration-300 text-lg">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
-                </svg>
-                Ver actividades de los talleres
-            </a>
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center sm:justify-end">
+                <a href="{{ route('workshops.create') }}"
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 text-base w-full sm:w-auto justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 4v16m8-8H4" />
+                    </svg>
+                    Nuevo Taller
+                </a>
+                <a href="{{ route('workshops_activities.index') }}"
+                    class="inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition duration-300 text-base w-full sm:w-auto justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                    </svg>
+                    Ver actividades de los talleres
+                </a>
+            </div>
         </header>
 
         @if ($workshops->isEmpty())

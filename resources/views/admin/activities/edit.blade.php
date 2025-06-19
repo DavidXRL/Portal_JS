@@ -7,13 +7,20 @@
     @vite(['resources/css/app.css'])
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen">
-    @include('layout.main_template')
+    @include('layout.main_template-admin')
 
-    <main class="flex items-center justify-center min-h-screen">
+    <main class="flex items center justify-center min-h-screen mt-10 mb-10">
         <section class="w-full max-w-2xl bg-white/90 rounded-3xl shadow-2xl p-10 border border-gray-200">
-            <h1 class="text-4xl font-extrabold text-center text-gray-700 mb-10 drop-shadow-lg">
-                Editar Información de la Actividad
-            </h1>
+                  <div class="mb-10 text-center">
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
+                    Editar información de la actividad:
+                </h1>
+                <div class="inline-block bg-green-100 px-5 py-2 rounded-full mt-2">
+                    <span class="text-xl font-semibold text-green-700">
+                        {{ $activity->name_act }}
+                    </span>
+                </div>
+            </div>
 
             @if ($errors->any())
                 <div class="mb-6 bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded-xl shadow">

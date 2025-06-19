@@ -49,6 +49,7 @@ Route::get('/workshop_activities', function () {
 //RUTAS PARA MÉTODOS REST DE LAS ACTIVIDADES
 Route::get('/activities_esc', [App\Http\Controllers\ActivityController::class, 'workshop']);
 Route::get('/workshop', [App\Http\Controllers\WorkshopController::class, 'workshopp']);
+Route::get('/workshop_activities', [App\Http\Controllers\WorkshopActivityController::class, 'workshop_activities']);
 Route::resource('/activities', App\Http\Controllers\ActivityController::class);
 Route::delete('/activities/{activity}/delete', [App\Http\Controllers\ActivityController::class, 'delete'])->name('activities.delete');
 
@@ -60,5 +61,7 @@ Route::delete('/comments/{comment}/delete', [App\Http\Controllers\CommentControl
 Route::resource('/workshops', App\Http\Controllers\WorkshopController::class);
 Route::delete('/workshops/{workshop}/delete', [App\Http\Controllers\WorkshopController::class, 'delete'])->name('workshops.delete');
 
-Route::resource('/workshops_activities', App\Http\Controllers\WorkshopActivityController::class);
+Route::resource('/workshops_activities', App\Http\Controllers\WorkshopActivityController::class)
+     ->parameters(['workshops_activities' => 'workshop_activity']);
+
 Route::delete('/workshops_activities/{workshop_activity}/delete', [App\Http\Controllers\WorkshopActivityController::class, 'delete'])->name('workshops_activities.delete');
