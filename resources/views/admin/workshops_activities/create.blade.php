@@ -1,9 +1,21 @@
 @extends('layout.main_template-admin')
+
 @section('content')
+<x-app-layout>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <title>Crear actividad | Telesecundaria Justo Sierra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
 <div class="flex justify-center items-center min-h-screen bg-gray-50">
-    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-10">
-        <h1 class="text-4xl font-extrabold text-gray-700 mb-10 text-center">Agregar un nuevo taller</h1>
-        <p class="text-gray-600 text-center mb-8">Completa el siguiente formulario para crear una nueva actividad de taller.</p>
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-10 my-10">
+        <h1 class="text-4xl font-extrabold text-gray-700 mb-10 text-center">Crear nueva actividad</h1>
+        <p class="text-gray-600 text-center mb-8">Completa el siguiente formulario para crear una nueva actividad.</p>
 
         @if ($errors->any())
             <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-8 rounded">
@@ -75,4 +87,5 @@
         </form>
     </div>
 </div>
+</x-app-layout>
 @endsection

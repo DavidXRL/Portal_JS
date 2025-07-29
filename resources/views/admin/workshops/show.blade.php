@@ -1,13 +1,15 @@
+<x-app-layout>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <title>Detalles del Taller | Telesecundaria Justo Sierra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-100 min-h-screen">
-    @include('layout.main_template')
+
 
     <main class="container mx-auto mt-16 p-4 sm:p-6 md:p-10 bg-white/90 rounded-3xl shadow-2xl max-w-3xl border border-gray-200">
         @if ($errors->any())
@@ -73,3 +75,4 @@
     </main>
 </body>
 </html>
+</x-app-layout>

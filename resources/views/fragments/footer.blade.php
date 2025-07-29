@@ -15,7 +15,9 @@
             <ul class="space-y-2 text-gray-700 text-sm">
                 <li><a href="{{ url('/') }}" class="hover:text-gray-800 transition">Inicio</a></li>
                 <li><a href="{{ url('/about_us') }}" class="hover:text-gray-800 transition">Sobre nosotros</a></li>
-                <li><a href="{{ url('/workshop') }}" class="hover:text-gray-800 transition">Talleres y actividades</a></li>
+                <li><a href="{{ url('/workshop') }}" class="hover:text-gray-800 transition">Talleres</a></li>
+                <li><a href="{{ url('/activities_esc') }}" class="hover:text-gray-800 transition">Actividades</a></li>
+                <li><a href="{{ url('/workshop_activities') }}" class="hover:text-gray-800 transition">Actividades de taller</a></li>
                 <li><a href="{{ url('/#contact-info') }}" class="hover:text-gray-800 transition">Contacto</a></li>
             </ul>
         </div>

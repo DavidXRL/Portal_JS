@@ -1,7 +1,7 @@
 @extends('layout.main_template-admin')
 
 @section('content')
-
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -63,4 +63,5 @@
         </form>
     </div>
 </div>
+</x-app-layout>
 @endsection

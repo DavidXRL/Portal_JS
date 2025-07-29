@@ -1,13 +1,14 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <title>Detalles de la Actividad del Taller | Telesecundaria Justo Sierra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-100 min-h-screen">
-    @include('layout.main_template')
+
 
     <main class="container mx-auto mt-16 p-4 sm:p-6 md:p-10 bg-white/90 rounded-3xl shadow-2xl max-w-3xl border border-gray-200">
         @if ($errors->any())
@@ -66,11 +67,12 @@
             </div>
         </div>
         <div class="flex justify-center mt-8 px-2">
-            <a href="{{ route('workshops.index') }}"
+            <a href="{{ route('workshops_activities.index') }}"
                 class="inline-block bg-gray-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-all duration-200 text-center w-full max-w-xs sm:max-w-none">
-                Volver a la lista de talleres
+                Volver a la lista de actividades
             </a>
         </div>
     </main>
 </body>
 </html>
+</x-app-layout>

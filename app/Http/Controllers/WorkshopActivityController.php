@@ -10,6 +10,11 @@ Use App\Http\Requests\Workshops_Activities\UpdateRequest;
 
 class WorkshopActivityController extends Controller
 {
+
+public function __construct()
+{
+    $this->middleware('auth')->except('workshop_activities');
+}
     public function index()
     {
         $workshops_activities = WorkshopActivity::paginate(10); // Adjust the number of items per page as needed

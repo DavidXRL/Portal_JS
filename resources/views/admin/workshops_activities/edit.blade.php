@@ -1,14 +1,12 @@
-@extends('layout.main_template-admin')
 
-@section('content')
-
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <title>Editar Actividad de Taller | Telesecundaria Justo Sierra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen">
 
@@ -108,26 +106,31 @@
                             </option>
                         @endforeach
                     </select>
-                </div>
-               <p class="text-center font-bold text-gray-700 mt-8">Imagen actual:</p>
-                    <div class="flex justify-center">
-                        <img src="/image/workshops_activities/{{ $workshop_activity->image_activity }}"
-                            alt="Imagen del taller"
-                            class="max-w-full max-h-80 md:max-h-96 h-auto object-contain rounded-xl border-2 border-gray-200 shadow-md" />
-                    </div>
-                </div>
+            </div>
+            <p class="text-center font-bold text-gray-700 mt-8">Imagen actual:</p>
+            <div class="flex justify-center">
+                <img src="/image/workshops_activities/{{ $workshop_activity->image_activity }}"
+                    alt="Imagen del taller"
+                    class="max-w-full max-h-80 md:max-h-96 h-auto object-contain rounded-xl border-2 border-gray-200 shadow-md" />
+            </div>
 
             <div>
-                <button type="submit"
-                    class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all">Guardar cambios</button>
-                       </div>
-            <div class="flex justify-center mt-4">
-                <a href="{{ route('workshops_activities.index') }}"
-                    class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center">
-                    Volver a la vista de actividades
-                </a>
+                <button
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all"
+                >Guardar Cambios
+                </button>
             </div>
-        </form>
-    </div>
-</div>
-@endsection
+                <div class="flex justify-center mt-4">
+                    <a href="{{ route('workshops_activities.index') }}"
+                       class="w-full bg-gradient-to-r from-gray-600 to-gray-400 hover:from-gray-700 hover:to-gray-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center"
+                    >
+                        Volver a actividades
+                    </a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+</x-app-layout>

@@ -19,7 +19,8 @@
         <a href="{{ url('/about_us') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Sobre nosotros</a>
         <a href="{{ url('/activities_esc') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Actividades</a>
         <a href="{{ url('/workshop') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Talleres</a>
-        <a href="{{ route('activities.index') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Vista de administrador</a>
+        <a href="{{ url('/login') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Iniciar Sesión</a>
+        <a href="{{ url('/register') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Crear cuenta</a>
     </nav>
 </header>
 

@@ -1,7 +1,8 @@
+
 @extends('layout.main_template-admin')
 
 @section('content')
-
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -29,18 +30,18 @@
             @csrf
             <div>
                 <label for="name_workshop" class="block text-base font-semibold text-gray-800 mb-2">Nombre del taller</label>
-                <input type="text" name="name_workshop" id="name_workshop" required
+                <input type="text" name="name_workshop" id="name_workshop"
                     class="w-full border border-gray-200 rounded-xl shadow p-3 bg-gray-50/50"
                     value="{{ old('name_workshop') }}">
             </div>
             <div>
                 <label for="description_workshop" class="block text-base font-semibold text-gray-800 mb-2">Descripción del taller:</label>
-                <textarea name="description_workshop" id="description_workshop" rows="4" required
+                <textarea name="description_workshop" id="description_workshop" rows="4"
                     class="w-full border border-gray-200 rounded-xl shadow p-3 bg-gray-50/50">{{ old('description_workshop') }}</textarea>
             </div>
             <div>
                 <label for="date_workshop" class="block text-base font-semibold text-gray-800 mb-2">Fecha de creación</label>
-                <input type="date" name="date_workshop" id="date_workshop" required
+                <input type="date" name="date_workshop" id="date_workshop"
                     class="w-full border border-gray-200 rounded-xl shadow p-3 bg-gray-50/50"
                     value="{{ old('date_workshop') }}">
             </div>
@@ -63,4 +64,6 @@
         </form>
     </div>
 </div>
+</x-app-layout>
 @endsection
+</html>

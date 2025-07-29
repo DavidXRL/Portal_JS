@@ -1,13 +1,14 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Eliminar taller | Telesecundaria Justo Sierra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/app.css']) <!-- Tailwind CSS activo -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-br from-gray-100 to-red-100 min-h-screen flex flex-col">
-    @include('layout.main_template-admin')
+
 
     <main class="flex flex-1 items-center justify-center px-4 py-12">
         <div class="bg-white border border-red-200 rounded-2xl shadow-2xl w-full max-w-3xl p-6 sm:p-10 space-y-8">
@@ -59,3 +60,4 @@
     </main>
 </body>
 </html>
+</x-app-layout>

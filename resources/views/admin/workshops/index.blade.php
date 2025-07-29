@@ -1,3 +1,4 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -8,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans text-gray-900">
-    @include('layout.main_template-admin')
 
     <main class="max-w-5xl mx-auto mt-14 px-6 py-10">
         <header class="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-6 md:gap-0">
@@ -102,3 +102,4 @@
     </main>
 </body>
 </html>
+</x-app-layout>

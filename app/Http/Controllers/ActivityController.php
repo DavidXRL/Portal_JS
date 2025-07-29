@@ -9,6 +9,12 @@ use App\Http\Requests\Activities\UpdateRequest;
 
 class ActivityController extends Controller
 {
+public function __construct()
+{
+    $this->middleware('auth')->except('workshop');
+}
+
+
     public function index()
     {
         $activities = Activity::paginate(10); // Adjust the number of items per page as needed

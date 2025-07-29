@@ -8,6 +8,11 @@ Use App\Http\Requests\Workshops\UpdateRequest;
 
 class WorkshopController extends Controller
 {
+public function __construct()
+{
+    $this->middleware('auth')->except('workshopp');
+}
+
     public function index()
     {
         $workshops = Workshop::paginate(10); // Adjust the number of items per page as needed

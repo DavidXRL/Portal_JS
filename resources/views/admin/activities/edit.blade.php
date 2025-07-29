@@ -1,13 +1,14 @@
+<x-app-layout>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Editar actividad | Telesecundaria Justo Sierra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/app.css'])
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-br from-gray-100 via-white to-gray-200 min-h-screen">
-    @include('layout.main_template-admin')
+
 
     <main class="flex items center justify-center min-h-screen mt-10 mb-10">
         <section class="w-full max-w-2xl bg-white/90 rounded-3xl shadow-2xl p-10 border border-gray-200">
@@ -108,3 +109,4 @@
     </main>
 </body>
 </html>
+</x-app-layout>

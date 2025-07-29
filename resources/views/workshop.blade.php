@@ -39,31 +39,39 @@
         </section>
 
         {{-- Apartado para visualización de talleres --}}
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
-            @forelse ($workshops as $workshop)
-                <div class="bg-gray-100 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 w-80">
-                    <img src="/image/workshops/{{$workshop->image_workshop}}"
-                         alt="Imagen de {{ $workshop->name_workshop }}"
-                         class="w-full h-64 object-cover mb-6 rounded-lg">
+        @php
+            $chunks = $workshops->chunk(3);
+        @endphp
 
-                    <h2 class="text-2xl font-bold mb-3 text-gray-800 text-center w-full">
-                        {{ $workshop->name_workshop }}
-                    </h2>
+        @forelse ($chunks as $chunk)
+            <div class="grid gap-10 grid-cols-1 md:grid-cols-3 justify-center items-stretch mb-10">
+                @foreach ($chunk as $workshop)
+                    <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center hover:scale-105 transition-transform duration-300 min-h-[480px] w-full max-w-md mx-auto border border-gray-100">
+                        <img src="/image/workshops/{{$workshop->image_workshop}}"
+                             alt="Imagen de {{ $workshop->name_workshop }}"
+                             class="w-full h-56 object-cover mb-6 rounded-xl shadow-md">
 
-                    <p class="text-gray-700 text-center mb-4 w-full whitespace-normal break-words" title="{{ $workshop->description_workshop }}">
-                        {{ $workshop->description_workshop }}
-                    </p>
+                        <h2 class="text-2xl font-bold mb-3 text-[#10621E] text-center w-full">
+                            {{ $workshop->name_workshop }}
+                        </h2>
 
-                    <p class="text-sm text-gray-500 mt-auto w-full text-center">📅 Fecha de publicación:
-                         {{ \Carbon\Carbon::parse($workshop->date_workshop)->format('d/m/Y') }}
-                    </p>
-                </div>
-            @empty
-                <div class="col-span-full text-center text-gray-400 py-10 text-lg">
-                    No hay talleres registrados.
-                </div>
-            @endforelse
-        </div>
+                        <p class="text-gray-700 text-center mb-5 w-full whitespace-normal break-words text-base" title="{{ $workshop->description_workshop }}">
+                            {{ $workshop->description_workshop }}
+                        </p>
+
+                        <div class="mt-auto w-full flex justify-center">
+                            <span class="inline-block bg-[#51A35F]/10 text-[#10621E] px-5 py-2 rounded-lg text-sm font-semibold shadow">
+                                📅 {{ \Carbon\Carbon::parse($workshop->date_workshop)->format('d/m/Y') }}
+                            </span>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @empty
+            <div class="col-span-full text-center text-gray-400 py-10 text-lg">
+                No hay talleres registrados.
+            </div>
+        @endforelse
 
        <div class="flex justify-center mt-8 w-90%">
     <a href="{{ url('/workshop_activities') }}"
