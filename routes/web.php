@@ -57,6 +57,9 @@ Route::get('/workshop_activities', function () {
     return view('workshop_activities');
 });
 
+Route::get('/politicas-privacidad', function () {
+    return view('politicas-privacidad');
+});
 
 //RUTAS PARA MÉTODOS REST DE LAS ACTIVIDADES
 Route::get('/activities_esc', [App\Http\Controllers\ActivityController::class, 'workshop']);

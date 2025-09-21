@@ -44,8 +44,12 @@
 
 
     <div class="border-t mt-8 pt-4 text-center text-emerald-800 text-xs">
-        <div class="text-gray-500">
+    <div class="text-gray-500">
         &copy; {{ date('Y') }} Escuela Telesecundaria Justo Sierra. Todos los derechos reservados. &nbsp;
-        </div>
+        <a href="{{ url('/politicas-privacidad') }}" class="text-emerald-700 hover:underline">
+            Políticas de Privacidad
+        </a>
     </div>
+</div>
+
 </footer>
