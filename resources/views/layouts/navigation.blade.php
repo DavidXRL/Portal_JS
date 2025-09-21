@@ -7,7 +7,7 @@
                 <div class="shrink-0 flex items-center">
                     <img src="{{ asset('img/logo.png') }}" alt="Logo" class="h-10">
                 </div>
-
+<script src="https://cdn.tailwindcss.com"></script>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link class="text-gray-700 no-underline" :href="route('activities.index')" :active="request()->routeIs('activities')">
