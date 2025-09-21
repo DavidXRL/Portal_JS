@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+<script src="https://cdn.tailwindcss.com"></script>
 
     @if (session('status'))
         {{session('status')}}
