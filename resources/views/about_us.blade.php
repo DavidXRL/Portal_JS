@@ -26,22 +26,24 @@
   <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-14 tracking-wide flex items-center justify-center gap-3 drop-shadow-md">
     <span class="text-4xl">🕰️</span> NUESTRA HISTORIA
   </h2>
-  <div class="relative bg-white rounded-3xl shadow-2xl p-10 border border-green-200">
-    <div class="pl-8 border-l-8 border-green-400 space-y-7 text-justify text-lg text-gray-800 leading-relaxed font-medium max-w-4xl mx-auto">
-      <p>
-        Durante más de <span class="font-semibold text-green-900">cuatro décadas</span>, la Escuela Telesecundaria “Justo Sierra” ha consolidado su papel como un referente educativo en la comunidad, formando generaciones de estudiantes con sólidos valores, compromiso social y una visión orientada hacia el futuro. Este crecimiento ha sido posible gracias a la colaboración y esfuerzo conjunto de docentes, familias y autoridades, quienes han construido una institución comprometida con la excelencia educativa.
-      </p>
-      <p>
-        Fundada en <span class="font-semibold text-green-900">1977</span> con una matrícula inicial de 40 alumnos, la institución inició sus actividades en un espacio cedido por el Sindicato de la C.T.M., bajo la Dirección General para Adultos. La profesora <span class="font-semibold text-green-900">Úrsula Zaleta Salazar</span>, fundadora de la escuela, fue pieza fundamental en estos primeros años marcados por la esperanza y el compromiso con la educación.
-      </p>
-      <p>
-        Gracias al apoyo del Ayuntamiento, padres de familia y la comunidad, la escuela se estableció en su actual ubicación dentro de la Colonia Hidalgo, donde se construyeron las primeras aulas y servicios sanitarios, consolidando así un espacio propicio para el aprendizaje.
-      </p>
-      <p>
-        Actualmente, la Telesecundaria “Justo Sierra” se mantiene a la vanguardia en materia educativa, promoviendo el trabajo colaborativo, el respeto mutuo y la participación activa de todos sus miembros. Bajo la dirección del profesor <span class="font-semibold text-green-900">Joel Aguilera Luna</span>, la institución impulsa una educación integral que contribuye al desarrollo personal y académico de sus estudiantes, fomentando valores de humanismo e inclusión acorde a los principios de la Nueva Escuela Mexicana.
-      </p>
+<div class="relative bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-green-200">
+    <div class="space-y-7 text-justify text-lg text-gray-800 leading-relaxed font-medium max-w-4xl mx-auto">
+        <div class="flex flex-col gap-6">
+            <p>
+                Durante más de <span class="font-semibold text-green-900">cuatro décadas</span>, la Escuela Telesecundaria “Justo Sierra” ha consolidado su papel como un referente educativo en la comunidad, formando generaciones de estudiantes con sólidos valores, compromiso social y una visión orientada hacia el futuro. Este crecimiento ha sido posible gracias a la colaboración y esfuerzo conjunto de docentes, familias y autoridades, quienes han construido una institución comprometida con la excelencia educativa.
+            </p>
+            <p>
+                Fundada en <span class="font-semibold text-green-900">1977</span> con una matrícula inicial de 40 alumnos, la institución inició sus actividades en un espacio cedido por el Sindicato de la C.T.M., bajo la Dirección General para Adultos. La profesora <span class="font-semibold text-green-900">Úrsula Zaleta Salazar</span>, fundadora de la escuela, fue pieza fundamental en estos primeros años marcados por la esperanza y el compromiso con la educación.
+            </p>
+            <p>
+                Gracias al apoyo del Ayuntamiento, padres de familia y la comunidad, la escuela se estableció en su actual ubicación dentro de la Colonia Hidalgo, donde se construyeron las primeras aulas y servicios sanitarios, consolidando así un espacio propicio para el aprendizaje.
+            </p>
+            <p>
+                Actualmente, la Telesecundaria “Justo Sierra” se mantiene a la vanguardia en materia educativa, promoviendo el trabajo colaborativo, el respeto mutuo y la participación activa de todos sus miembros. Bajo la dirección del profesor <span class="font-semibold text-green-900">Joel Aguilera Luna</span>, la institución impulsa una educación integral que contribuye al desarrollo personal y académico de sus estudiantes, fomentando valores de humanismo e inclusión acorde a los principios de la Nueva Escuela Mexicana.
+            </p>
+        </div>
     </div>
-  </div>
+</div>
 </section>
 <!-- MISIÓN Y VISIÓN -->
 <section class="px-6 max-w-5xl mx-auto flex flex-col md:flex-row gap-10 mb-20">
