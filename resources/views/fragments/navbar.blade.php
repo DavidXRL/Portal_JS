@@ -15,12 +15,11 @@
     </button>
     <nav id="nav-menu" class="w-full md:w-auto space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0 hidden md:block">
         <a href="{{ url('/') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Inicio</a>
-        <a href="{{ url('/#contact-info') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Contacto</a>
         <a href="{{ url('/about_us') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Sobre nosotros</a>
         <a href="{{ url('/activities_esc') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Actividades</a>
         <a href="{{ url('/workshop') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Talleres</a>
+        <a href="{{ url('/#contact-info') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Contacto</a>
         <a href="{{ url('/login') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Iniciar Sesión</a>
-        <a href="{{ url('/register') }}" class="block md:inline text-gray-900 text-sm md:text-base transition hover:text-gray-500 font-semibold">Crear cuenta</a>
     </nav>
 </header>
 
